@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Store from "./pages/Store";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
+import PoolGamePage from "./pages/PoolGamePage";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/game/pool" element={<PoolGamePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
