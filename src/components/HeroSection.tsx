@@ -27,9 +27,9 @@ export const HeroSection = () => {
 
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="text-gradient">Jogue. Compita.</span>
+            <span className="text-gradient">Jogos Limpos. Jogadores Felizes.</span>
             <br />
-            <span className="text-foreground">Domine o Ranking.</span>
+            <span className="text-foreground">Plataforma Confiável.</span>
           </h1>
 
           {/* Description */}
