@@ -14,6 +14,124 @@ export type Database = {
   }
   public: {
     Tables: {
+      games: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          id: string
+          iframe_url: string | null
+          is_active: boolean | null
+          max_players: number | null
+          min_players: number | null
+          name: string
+          thumbnail_url: string | null
+          xp_reward: number | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          iframe_url?: string | null
+          is_active?: boolean | null
+          max_players?: number | null
+          min_players?: number | null
+          name: string
+          thumbnail_url?: string | null
+          xp_reward?: number | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          iframe_url?: string | null
+          is_active?: boolean | null
+          max_players?: number | null
+          min_players?: number | null
+          name?: string
+          thumbnail_url?: string | null
+          xp_reward?: number | null
+        }
+        Relationships: []
+      }
+      inventory: {
+        Row: {
+          acquired_at: string
+          id: string
+          is_equipped: boolean | null
+          skin_id: string
+          user_id: string
+        }
+        Insert: {
+          acquired_at?: string
+          id?: string
+          is_equipped?: boolean | null
+          skin_id: string
+          user_id: string
+        }
+        Update: {
+          acquired_at?: string
+          id?: string
+          is_equipped?: boolean | null
+          skin_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "inventory_skin_id_fkey"
+            columns: ["skin_id"]
+            isOneToOne: false
+            referencedRelation: "skins"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      matches: {
+        Row: {
+          coins_earned: number
+          created_at: string
+          duration_seconds: number | null
+          game_id: string
+          id: string
+          player_id: string
+          result: string | null
+          score: number
+          xp_earned: number
+        }
+        Insert: {
+          coins_earned?: number
+          created_at?: string
+          duration_seconds?: number | null
+          game_id: string
+          id?: string
+          player_id: string
+          result?: string | null
+          score?: number
+          xp_earned?: number
+        }
+        Update: {
+          coins_earned?: number
+          created_at?: string
+          duration_seconds?: number | null
+          game_id?: string
+          id?: string
+          player_id?: string
+          result?: string | null
+          score?: number
+          xp_earned?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "matches_game_id_fkey"
+            columns: ["game_id"]
+            isOneToOne: false
+            referencedRelation: "games"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -50,6 +168,42 @@ export type Database = {
           username?: string
           wins?: number
           xp?: number
+        }
+        Relationships: []
+      }
+      skins: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          id: string
+          image_url: string | null
+          is_available: boolean | null
+          name: string
+          price: number
+          rarity: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          is_available?: boolean | null
+          name: string
+          price?: number
+          rarity?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          is_available?: boolean | null
+          name?: string
+          price?: number
+          rarity?: string | null
         }
         Relationships: []
       }

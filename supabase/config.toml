@@ -1,1 +1,13 @@
 project_id = "qjiaikyxjkmobzwmhgep"
+
+[functions.register-match]
+verify_jwt = true
+
+[functions.get-leaderboard]
+verify_jwt = false
+
+[functions.get-games]
+verify_jwt = false
+
+[functions.manage-inventory]
+verify_jwt = true
