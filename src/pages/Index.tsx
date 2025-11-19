@@ -70,7 +70,7 @@ const Index = () => {
     {
       id: "pool", // ID Customizado para facilitar o mapeamento
       title: "8 Ball Pool", // TÍTULO IMPORTANTE
-      image: "/assets/images/poolday.jpeg", // <--- AGORA USANDO SEU ARQUIVO LOCAL
+      image: "assets/images/poolday.jpeg", // <--- AGORA USANDO SEU ARQUIVO LOCAL
       category: "Esportes",
       players: 65000,
       rating: 4.9,
