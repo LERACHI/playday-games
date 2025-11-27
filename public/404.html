@@ -11,7 +11,7 @@
         if (segments[0] === base) {
           segments.shift();
         }
-        var newPath = "/" + base + "/" + segments.join("/");
+        var newPath = "/" + base + "/#/" + segments.join("/");
         var query = window.location.search || "";
         var hash = window.location.hash || "";
         window.location.replace(newPath + query + hash);
