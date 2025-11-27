@@ -11,6 +11,9 @@ import Store from "./pages/Store";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 import PoolGamePage from "./pages/PoolGamePage";
+import ArcadeCollection from "./pages/ArcadeCollection";
+import OfflineGames from "./pages/OfflineGames";
+import GamePlaceholder from "./pages/GamePlaceholder";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +34,9 @@ const App = () => (
             <Route path="/profile" element={<Profile />} />
             <Route path="/store" element={<Store />} />
             <Route path="/game/pool" element={<PoolGamePage />} />
+            <Route path="/game/:id" element={<GamePlaceholder />} />
+            <Route path="/arcade" element={<ArcadeCollection />} />
+            <Route path="/offline" element={<OfflineGames />} />
 
             {/* CATCH-ALL */}
             <Route path="*" element={<NotFound />} />

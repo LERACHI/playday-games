@@ -48,8 +48,8 @@ export default function PoolGamePage() {
       <div className="container mx-auto py-8 px-4">
         <Card>
           <CardHeader>
-            <CardTitle>Autenticação Necessária</CardTitle>
-            <CardDescription>Você precisa estar logado para jogar</CardDescription>
+            <CardTitle>Autenticacao Necessaria</CardTitle>
+            <CardDescription>Voce precisa estar logado para jogar</CardDescription>
           </CardHeader>
           <CardContent>
             <Button onClick={() => navigate('/auth')}>Fazer Login</Button>
@@ -70,7 +70,7 @@ export default function PoolGamePage() {
         <div className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>8 Ball Pool - Multiplayer</CardTitle>
+              <CardTitle>PlayPool - Multiplayer</CardTitle>
               <CardDescription>
                 Jogue sinuca em tempo real com outro jogador
               </CardDescription>
@@ -96,7 +96,7 @@ export default function PoolGamePage() {
                 <h3 className="font-semibold">Entrar em Sala Existente</h3>
                 <div className="flex gap-2">
                   <Input
-                    placeholder="Digite o código da sala"
+                    placeholder="Digite o codigo da sala"
                     value={roomId}
                     onChange={(e) => setRoomId(e.target.value)}
                   />
@@ -113,10 +113,10 @@ export default function PoolGamePage() {
               <CardTitle>Como Jogar</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm text-muted-foreground">
-              <p>• <strong>Mira:</strong> Clique e arraste a partir da bola branca para mirar</p>
-              <p>• <strong>Força:</strong> A distância do arraste determina a força da tacada</p>
-              <p>• <strong>Turno:</strong> Aguarde seu turno para jogar</p>
-              <p>• <strong>Sincronização:</strong> As posições das bolas são sincronizadas em tempo real</p>
+              <p>- <strong>Mira:</strong> Clique e arraste a partir da bola branca para mirar</p>
+              <p>- <strong>Forca:</strong> A distancia do arraste determina a forca da tacada</p>
+              <p>- <strong>Turno:</strong> Aguarde seu turno para jogar</p>
+              <p>- <strong>Sincronizacao:</strong> As posicoes das bolas sao sincronizadas em tempo real</p>
             </CardContent>
           </Card>
         </div>
@@ -132,7 +132,7 @@ export default function PoolGamePage() {
           Sair da Sala
         </Button>
         <div className="text-sm text-muted-foreground">
-          Compartilhe o código da sala: <strong>{roomId}</strong>
+          Compartilhe o codigo da sala: <strong>{roomId}</strong>
         </div>
       </div>
 

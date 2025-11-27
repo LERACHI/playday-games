@@ -1,69 +1,65 @@
 import { Button } from "./ui/button";
-import { Sparkles, TrendingUp } from "lucide-react";
+import { Sparkles, MonitorPlay, ShieldCheck } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-gaming-cyan/10">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gaming-cyan rounded-full blur-[120px] animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gaming-blue rounded-full blur-[120px] animate-pulse delay-700" />
-        </div>
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0a0c12] via-[#0c0f15] to-[#0f1017] text-white">
+      <div className="absolute inset-0">
+        <div className="absolute -left-32 -top-24 h-80 w-80 rounded-full bg-[#ff5f6d] blur-[160px] opacity-70" />
+        <div className="absolute right-0 top-10 h-96 w-96 rounded-full bg-[#7f5af0] blur-[170px] opacity-60" />
+        <div className="absolute left-1/4 bottom-[-120px] h-96 w-[32rem] rounded-full bg-[#10b981] blur-[200px] opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ffffff0f,transparent_45%)]" />
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Badge */}
-          <div className="flex justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-gaming-cyan/30">
-              <Sparkles className="h-4 w-4 text-gaming-cyan" />
-              <span className="text-sm font-medium text-foreground">
-                A Nova Era dos Jogos Online
-              </span>
-            </div>
+      <div className="container mx-auto px-6 pb-24 pt-28 relative z-10">
+        <div className="max-w-5xl mx-auto text-center space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur">
+            <Sparkles className="h-4 w-4 text-white" />
+            <span className="text-sm uppercase tracking-[0.2em] text-white/80">PlayDay Arcade</span>
           </div>
 
-          {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="text-gradient">Jogos Limpos. Jogadores Felizes.</span>
-            <br />
-            <span className="text-foreground">Plataforma Confiável.</span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+            Jogue o melhor do arcade em um lugar so.
           </h1>
-
-          {/* Description */}
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Milhares de jogos gratuitos, multiplayer épico e uma comunidade global.
-            Sua próxima aventura começa aqui.
+          <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto">
+            Experiencias premium, sem anuncios e com play instantaneo. Descubra curadoria exclusiva,
+            desafios semanais e titulos para jogar online ou offline.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-gaming hover:opacity-90 text-white text-lg px-8 h-14">
-              Começar a Jogar
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button size="lg" className="rounded-full px-8 h-14 text-lg bg-white text-black hover:bg-white/90">
+              Jogar agora
             </Button>
-            <Button size="lg" variant="outline" className="border-gaming-cyan text-gaming-cyan hover:bg-gaming-cyan/10 text-lg px-8 h-14">
-              Ver Jogos Populares
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-full px-8 h-14 text-lg border-white/50 bg-white/80 text-black hover:bg-white"
+            >
+              Ver catalogo
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12">
-            <div className="glass-card p-6 rounded-xl border border-gaming-cyan/20">
-              <div className="text-3xl font-bold text-gradient mb-1">500+</div>
-              <div className="text-sm text-muted-foreground">Jogos Disponíveis</div>
-            </div>
-            <div className="glass-card p-6 rounded-xl border border-gaming-cyan/20">
-              <div className="text-3xl font-bold text-gradient mb-1">2M+</div>
-              <div className="text-sm text-muted-foreground">Jogadores Ativos</div>
-            </div>
-            <div className="glass-card p-6 rounded-xl border border-gaming-cyan/20 flex flex-col items-center">
-              <div className="flex items-center gap-2 mb-1">
-                <TrendingUp className="h-6 w-6 text-gaming-green" />
-                <div className="text-3xl font-bold text-gaming-green">24/7</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-10">
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-4 flex items-center gap-3">
+              <MonitorPlay className="h-10 w-10 text-white" />
+              <div className="text-left">
+                <div className="text-lg font-semibold text-white">Jogue em todos os dispositivos</div>
+                <div className="text-sm text-white/70">Console, notebook ou mobile, tudo sincronizado.</div>
               </div>
-              <div className="text-sm text-muted-foreground">Sempre Online</div>
+            </div>
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-4 flex items-center gap-3">
+              <ShieldCheck className="h-10 w-10 text-white" />
+              <div className="text-left">
+                <div className="text-lg font-semibold text-white">Sem anuncios</div>
+                <div className="text-sm text-white/70">Nada de pop-ups, apenas gameplay.</div>
+              </div>
+            </div>
+            <div className="rounded-2xl bg-white/5 border border-white/10 p-4 flex items-center gap-3">
+              <Sparkles className="h-10 w-10 text-white" />
+              <div className="text-left">
+                <div className="text-lg font-semibold text-white">Novos jogos toda semana</div>
+                <div className="text-sm text-white/70">Colecoes que evoluem com voce.</div>
+              </div>
             </div>
           </div>
         </div>
