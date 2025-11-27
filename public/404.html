@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PlayDay</title>
+    <script>
+      (function() {
+        var path = window.location.pathname.replace(/^\/+/, "");
+        var base = "playday-games";
+        var segments = path.split("/");
+        if (segments[0] === base) {
+          segments.shift();
+        }
+        var newPath = "/" + base + "/" + segments.join("/");
+        var query = window.location.search || "";
+        var hash = window.location.hash || "";
+        window.location.replace(newPath + query + hash);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando...</p>
+  </body>
+</html>
